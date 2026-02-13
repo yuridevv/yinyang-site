@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yy-bg: #f7f4ef;
+  --color-yy-black: #1a1a1a;
+  --color-yy-accent: #e6e2da;
+  --color-yy-muted: #8c887d;
+  
+  --font-display: "Syncopate", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --animate-noise: noise 0.2s infinite;
+
+  @keyframes noise {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-yy-bg text-yy-black font-body antialiased overflow-x-hidden relative;
+    /* Removi o feltro pesado do body para reduzir o ruído visual */
+  }
+
+  /* Camada de Noise Animado - Opacidade reduzida para ser sutil */
+  body::before {
+    content: "";
+    @apply fixed inset-[-200%] w-[400%] h-[400%] pointer-events-none z-[1] opacity-[0.015];
+    background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation: noise 8s steps(10) infinite;
+  }
+
+  /* PÓS-PROCESSAMENTO: VIGNETTE sutil */
+  body::after {
+    content: "";
+    @apply fixed inset-0 pointer-events-none z-[5];
+    background: radial-gradient(circle, transparent 50%, rgba(0,0,0,0.03) 100%);
+  }
+}
+
+/* Efeito de Bloom sutil */
+h1, h2, .font-black {
+  text-shadow: 0 0 1px rgba(26, 26, 26, 0.05);
+}
+
+.organic-shadow {
+  box-shadow: 20px 20px 60px #d9d6ce, -20px -20px 60px #ffffff;
+}
+
+.hand-drawn-border {
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+}
+
+.grayscale:hover {
+  filter: grayscale(0%) contrast(100%) brightness(100%);
+}
