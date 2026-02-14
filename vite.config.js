@@ -7,6 +7,6 @@ export default defineConfig(({ command, mode }) => {
     plugins: [react()],
     // 'command' é 'build' quando rodamos npm run build/deploy
     // No GitHub Pages, o caminho base deve ser o nome do repositório
-    base: command === 'build' ? '/yinyang-site/' : '/',
+    base: "/"
   }
 })
