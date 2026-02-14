@@ -15,8 +15,8 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 py-12 px-12">
-      <div className="flex justify-between items-start">
+    <nav className="fixed top-0 left-0 w-full z-50 py-12 px-12 pointer-events-none">
+      <div className="flex justify-between items-start pointer-events-auto">
         <Link to="/" className="group">
           <h1 className="text-xl font-black leading-none tracking-tighter">YINYANG</h1>
           <p className="text-[8px] tracking-[0.6em] text-yy-muted mt-1 group-hover:text-yy-primary transition-colors uppercase">

@@ -12,7 +12,7 @@ const About = () => {
       title: "Y&Y.",
       label: "YINYANG — A História",
       section1Title: "Início",
-      section1Desc: "YINYANG não foi nem um pouco planejado. Ao notarem que usavamos moletons de cores opostas, um de preto e outro off-white, 'Yin Yang' começou a ser usado para se referir a nós como dupla. Gostamos tanto dessa dinâmica de opostos, que transformamos isso em um projeto. Yuri e Guilherme, YINYANG, uma dupla de artistas lançando pelo mesmo nome. Mas percebemos que não fazia sentido, porque eramos muito diferentes e isso ia ser um limitador. Então cada um seguiu seu caminho de artista solo. E depois de alguns eventos, rolês, brigas e reconciliações, percebemos que no fundo, mesmo diferentes, eramos muito parecidos. Então fizemos nosso primeiro projeto junto 'MAQUIAGEM', e a partir disso, YINYANG se tornou um coletivo criativo, uma gravadora independente. Um hub totalmente nosso. Então no fim, Yuro, Yellow, YINYANG e Y&Y são a mesma coisa.",
+      section1Desc: "YINYANG não foi nem um pouco planejado. Ao notarem que usavamos moletons de cores opostas, um de preto e outro off-white, 'Yin Yang' começou a ser usado para se referir a nós como dupla. Gostamos tanto dessa dinâmica de opostos, que transformamos isso em um projeto. Yuri e Guilherme, YINYANG, uma dupla de artistas lançando pelo mesmo nome. Mas percebemos que não fazia sentido, porque eramos muito diferentes e isso ia ser um limitador. Então cada um seguiu seu caminho de artista solo. E depois de alguns eventos, rolês, brigas e reconciliações, percebemos que no fundo, mesmo diferentes, eramos muito parecidos. Então fizemos nosso primeiro projeto juntos 'MAQUIAGEM', e a partir disso, YINYANG se tornou um coletivo criativo, uma gravadora independente. Um hub totalmente nosso. Então no fim, Yuro, Yellow, YINYANG e Y&Y são a mesma coisa.",
       section2Title: "ESTILO",
       section2Desc: "Definir YINYANG com um estilo, gênero e até idioma só, é um erro. Fazemos o que queremos, do jeito que queremos, e essa é a coisa boa em ser independente. Mas se fosse pra definir, fazemos R&B, Rap, Boombap, Alternativo, Indie Rock, etc. Só não fazemos música em espanhol porque não sabemos falar.",
       section3Title: "OBJETIVO",
@@ -37,7 +37,7 @@ const About = () => {
       <div className="pt-48 pb-32 px-12 min-h-screen">
         <div className="max-w-5xl mx-auto">
           <div className="mb-32 text-center relative">
-             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 opacity-10"><History size={120} /></div>
+             <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-12 opacity-10 pointer-events-none"><History size={120} /></div>
              <h1 className="text-8xl md:text-[12rem] font-black tracking-tighter leading-none italic mb-8 relative z-10">{t.title}</h1>
              <p className="text-[10px] font-bold tracking-[0.6em] text-yy-muted uppercase flex items-center justify-center"><Layers size={14} className="mr-4" /> {t.label}</p>
           </div>

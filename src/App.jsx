@@ -28,7 +28,7 @@ function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-screen selection:bg-yy-black selection:text-yy-bg relative overflow-hidden flex flex-col">
+      <div className="min-h-screen selection:bg-yy-black selection:text-yy-bg relative flex flex-col">
         <ScrollToTop />
         <WaveBackground />
         

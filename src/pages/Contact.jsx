@@ -11,7 +11,7 @@ const Contact = () => {
       title: "CONTATE A GENTE.",
       quote: "Mande uma ideia de feat, um beat, ou só um oi. A gente responde rapidinho.",
       label: "Linha Direta Y&Y",
-      location: "São Paulo — Mundial",
+      location: "Brasil — Mundial",
       depts: [
         { label: "YINYANG", info: "Sem email oficial ainda" },
         { label: "YURO", info: "contatoyurifernandes@gmail.com" },
@@ -22,7 +22,7 @@ const Contact = () => {
       title: "CONTACT US.",
       quote: "Send us a collab idea, a beat, or just say hi. We reply fast.",
       label: "Y&Y Direct Line",
-      location: "São Paulo — Worldwide",
+      location: "Brazil — Worldwide",
       depts: [
         { label: "YINYANG", info: "No official email yet" },
         { label: "YURO", info: "contatoyurifernandes@gmail.com" },

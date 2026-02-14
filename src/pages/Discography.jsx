@@ -101,7 +101,7 @@ const Discography = () => {
 
   return (
     <PageWrapper>
-      <div className="pt-48 pb-32 px-8 min-h-screen max-w-7xl mx-auto overflow-hidden">
+      <div className="pt-48 pb-32 px-8 min-h-screen max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-start gap-24 relative">
           
           <div className="flex-1 relative flex justify-center items-center min-h-[500px] w-full lg:sticky lg:top-48">
