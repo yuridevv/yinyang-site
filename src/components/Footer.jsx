@@ -1,23 +1,37 @@
 import { Link } from 'react-router-dom';
 import { Mail } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
 
 const Footer = () => {
+  const { lang } = useLanguage();
+
+  const t = {
+    pt: {
+      contact: "Fale com a gente",
+      rights: "Todos os direitos reservados."
+    },
+    en: {
+      contact: "Contact us",
+      rights: "All rights reserved."
+    }
+  }[lang];
+
   return (
     <footer className="py-20 px-8 border-t border-yy-black/5 flex flex-col items-center justify-center text-center space-y-8 relative z-10">
       
-      {/* Botão de Contato Único */}
+      {/* Botão de Contato */}
       <Link 
         to="/contato"
         className="group flex items-center space-x-3 bg-yy-black text-yy-bg px-8 py-4 rounded-full hover:scale-105 transition-all shadow-xl"
       >
         <Mail size={18} />
-        <span className="text-[10px] font-black uppercase tracking-[0.4em]">Contato</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.4em]">{t.contact}</span>
       </Link>
       
       <div className="space-y-2 pt-4">
         <p className="text-[10px] font-black uppercase tracking-[0.6em] text-yy-black">YINYANG RECORDS</p>
         <p className="text-[9px] text-yy-muted uppercase tracking-widest">
-          © {new Date().getFullYear()} Yuri Fernandes & Guilherme Assunção. Todos os direitos reservados.
+          © {new Date().getFullYear()} Yuro & Yellow. {t.rights}
         </p>
       </div>
       

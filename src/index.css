@@ -60,7 +60,3 @@ h1, h2, .font-black {
 .hand-drawn-border {
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
 }
-
-.grayscale:hover {
-  filter: grayscale(0%) contrast(100%) brightness(100%);
-}

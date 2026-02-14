@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { useEffect } from 'react';
+import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import WaveBackground from './components/WaveBackground';
@@ -26,30 +27,32 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="min-h-screen selection:bg-yy-black selection:text-yy-bg relative overflow-hidden flex flex-col">
-      <ScrollToTop />
-      <WaveBackground />
-      
-      <div className="relative z-10 flex flex-col min-h-screen">
-        <Navbar />
-        <Sidebar />
+    <LanguageProvider>
+      <div className="min-h-screen selection:bg-yy-black selection:text-yy-bg relative overflow-hidden flex flex-col">
+        <ScrollToTop />
+        <WaveBackground />
         
-        <main className="flex-1">
-          <AnimatePresence mode="wait">
-            <Routes location={location} key={location.pathname}>
-              <Route path="/" element={<Home />} />
-              <Route path="/ouvir" element={<Listen />} />
-              <Route path="/discografia" element={<Discography />} />
-              <Route path="/artistas" element={<Artists />} />
-              <Route path="/sobre" element={<About />} />
-              <Route path="/contato" element={<Contact />} />
-            </Routes>
-          </AnimatePresence>
-        </main>
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Navbar />
+          <Sidebar />
+          
+          <main className="flex-1">
+            <AnimatePresence mode="wait">
+              <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Home />} />
+                <Route path="/ouvir" element={<Listen />} />
+                <Route path="/discografia" element={<Discography />} />
+                <Route path="/artistas" element={<Artists />} />
+                <Route path="/sobre" element={<About />} />
+                <Route path="/contato" element={<Contact />} />
+              </Routes>
+            </AnimatePresence>
+          </main>
 
-        <Footer />
+          <Footer />
+        </div>
       </div>
-    </div>
+    </LanguageProvider>
   );
 }
 
