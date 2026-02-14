@@ -31,7 +31,7 @@ const Footer = () => {
       <div className="space-y-2 pt-4">
         <p className="text-[10px] font-black uppercase tracking-[0.6em] text-yy-black">YINYANG RECORDS</p>
         <p className="text-[9px] text-yy-muted uppercase tracking-widest">
-          © {new Date().getFullYear()} Yuro & Yellow. {t.rights}
+          © {new Date().getFullYear()} Yuri Fernandes & Guilherme Assunção. {t.rights}
         </p>
       </div>
       

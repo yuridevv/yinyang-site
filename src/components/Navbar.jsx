@@ -17,11 +17,21 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 py-12 px-12 pointer-events-none">
       <div className="flex justify-between items-start pointer-events-auto">
-        <Link to="/" className="group">
-          <h1 className="text-xl font-black leading-none tracking-tighter">YINYANG</h1>
-          <p className="text-[8px] tracking-[0.6em] text-yy-muted mt-1 group-hover:text-yy-primary transition-colors uppercase">
-            {lang === 'pt' ? 'Records' : 'Records'}
-          </p>
+        <Link to="/" className="group flex items-start space-x-3">
+          <div className="mt-1 group-hover:rotate-180 transition-transform duration-700">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" />
+              <path d="M12 2a5 5 0 0 0 0 10 5 5 0 0 1 0 10" />
+              <circle cx="12" cy="7" r="1" fill="currentColor" />
+              <circle cx="12" cy="17" r="1" fill="currentColor" />
+            </svg>
+          </div>
+          <div>
+            <h1 className="text-xl font-black leading-none tracking-tighter">YINYANG</h1>
+            <p className="text-[8px] tracking-[0.6em] text-yy-muted mt-1 group-hover:text-yy-primary transition-colors uppercase">
+              {lang === 'pt' ? 'Records' : 'Records'}
+            </p>
+          </div>
         </Link>
         
         <div className="flex flex-col items-end space-y-4">

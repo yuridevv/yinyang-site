@@ -43,15 +43,33 @@ const Home = () => {
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              className="z-10 lg:w-1/2"
+              className="z-10 lg:w-1/2 relative group"
             >
               <div className="flex items-center space-x-4 mb-6 text-yy-muted">
                 <Asterisk className="animate-spin-slow" size={24} />
                 <span className="text-[10px] font-bold tracking-[0.5em] uppercase">{t.label}</span>
               </div>
-              <h1 className="text-7xl md:text-[11rem] font-black tracking-tighter leading-[0.8] mb-8 text-yy-black">
-                YIN<br/>YANG
-              </h1>
+              
+              <div className="relative">
+                {/* Background Icon */}
+                <motion.div 
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute -top-20 -left-20 w-64 h-64 md:w-[32rem] md:h-[32rem] text-yy-black opacity-[0.05] pointer-events-none z-[-1]"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z" />
+                    <path d="M12 2a5 5 0 0 0 0 10 5 5 0 0 1 0 10" />
+                    <circle cx="12" cy="7" r="1" fill="currentColor" />
+                    <circle cx="12" cy="17" r="1" fill="currentColor" />
+                  </svg>
+                </motion.div>
+
+                <h1 className="text-7xl md:text-[11rem] font-black tracking-tighter leading-[0.8] mb-8 text-yy-black">
+                  YIN<br/>YANG
+                </h1>
+              </div>
+
               <p className="text-xl md:text-2xl italic text-yy-muted max-w-md leading-relaxed">
                 {t.quote}
               </p>
